@@ -1,4 +1,11 @@
 package com.saucedemo.pages;
 
-public class ProductsPAGE {
+import com.base.BasePage;
+import org.openqa.selenium.By;
+
+public class ProductsPage extends BasePage {
+    private By productHeader = By.xpath("//span[text() = 'Products']");
+    public  boolean isProductsHeaderDisplay(){
+        return find(productHeader).isDisplayed();
+    }
 }

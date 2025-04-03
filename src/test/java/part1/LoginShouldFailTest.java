@@ -9,7 +9,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class FirstSeleniumTest {
+public class LoginShouldFailTest {
     WebDriver driver;
 
     @BeforeClass
@@ -39,7 +39,7 @@ public class FirstSeleniumTest {
       Thread.sleep(2000);
       String actualResult =  driver.findElement(By.tagName("h6")).getText();
       String expectedResult = "Dashboard";
-      Assert.assertEquals(actualResult,expectedResult);
+      Assert.assertNotEquals(actualResult,expectedResult);
 
     }
 }
