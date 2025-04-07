@@ -2,9 +2,13 @@ package part3_4.com.demoqa.base;
 
 import com.demoqa.pages.HomePage;
 import com.base.BasePage;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
@@ -31,6 +35,15 @@ public class BaseTest {
         setUtitlyDriver();
         homePage = new HomePage();
 
+    }
+
+    @AfterMethod
+    public  void takeFailedResultScreenshot(ITestResult testResult){
+        if (ITestResult.FAILURE == testResult.getStatus()){
+            TakesScreenshot screenshot = (TakesScreenshot) driver;
+            screenshot.getScreenshotAs(OutputType.FILE);
+
+        }
     }
 
     @AfterClass
