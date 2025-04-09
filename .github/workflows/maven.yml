@@ -28,6 +28,6 @@ jobs:
       - name: Set up Maven
         uses: stCarolas/setup-maven@v4.5
         with:
-          maven-version: '3.8.x' # Chọn phiên bản Maven phù hợp
+          maven-version: '4.0.x' # Chọn phiên bản Maven phù hợp
       - name: Build with Maven
         run: mvn clean install
