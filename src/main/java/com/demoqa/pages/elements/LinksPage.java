@@ -1,7 +1,6 @@
 package com.demoqa.pages.elements;
 
 import org.openqa.selenium.By;
-import utilities.JavascriptUtility;
 
 import static utilities.JavascriptUtility.scrollToElementJS;
 

@@ -2,7 +2,7 @@ package com.demoqa.pages.elements;
 
 import com.demoqa.pages.HomePage;
 import org.openqa.selenium.By;
-import utilities.JavascriptUtility;
+
 
 import static utilities.JavascriptUtility.scrollToElementJS;
 
